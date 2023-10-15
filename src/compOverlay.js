@@ -1,20 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Overlay } from '@rneui/themed';
 import { View, Text, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-function BackButton() {
-    const navigation = useNavigation();
-    return (
-      <Button
-        title="BACK"
-        onPress={() => {
-          navigation.goBack();
-        }}
-      />
-    );
-  }
 
 export function Overlays () {
   const [visible, setVisible] = useState(false);
@@ -49,9 +37,6 @@ export function Overlays () {
           onPress={toggleOverlay}
         />
       </Overlay>
-      <View style={{padding:20}}>
-      <BackButton />
-    </View> 
     </View>
   );
 };

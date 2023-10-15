@@ -1,7 +1,6 @@
 import React from 'react';
 import { Text, View, Button, ScrollView, StyleSheet } from 'react-native';
 import { Avatar, Badge, withBadge } from '@rneui/themed';
-import { useNavigation } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function BackButton() {
@@ -108,9 +107,6 @@ export function Badges(){
         </View>
       </View>
     </ScrollView>
-    <View style={{padding:20}}>
-      <BackButton />
-    </View> 
     </View>
   );
 };

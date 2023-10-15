@@ -4,10 +4,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { AvatarC } from './src/compAvatar';
-import { bottomSheet } from './src/compBottomSheet';
+import { BS } from './src/compBottomSheet';
 import { Ratings } from './src/compRating';
 import { Badges } from './src/compBadge';
 import { Overlays } from './src/compOverlay';
+import { SD } from './src/compSpeedDial';
 
 
 //MY HOME <3
@@ -54,7 +55,7 @@ function ComponentScreen({ navigation: { navigate }}) {
           <Button style={{}}  title="Avatar" onPress={() => navigate('Avatar')}/>
         </View>
         <View style={styles.button}>
-          <Button  title="BottomSheet" onPress={() => navigate('Bottom Sheet')}/>
+          <Button  title="Bottom Sheet" onPress={() => navigate('Bottom Sheet')}/>
         </View>
         <View style={styles.button}>
           <Button  title="Rating" onPress={() => navigate('Rating')}/>
@@ -64,6 +65,9 @@ function ComponentScreen({ navigation: { navigate }}) {
         </View>
         <View style={styles.button}>
           <Button  title="Overlay" onPress={() => navigate('Overlay')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Speed Dial" onPress={() => navigate('Speed Dial')}/>
         </View>
       </View>
       
@@ -101,10 +105,11 @@ export default function App() {
           />
         <Stack.Screen name="COMPONENTS" component={ComponentScreen}/>
         <Stack.Screen name="Avatar" component={AvatarC}/>
-        <Stack.Screen name="Bottom Sheet" component={bottomSheet}/>
+        <Stack.Screen name="Bottom Sheet" component={BS}/>
         <Stack.Screen name="Rating" component={Ratings}/>
         <Stack.Screen name="Badge" component={Badges}/>
         <Stack.Screen name="Overlay" component={Overlays}/>
+        <Stack.Screen name="Speed Dial" component={SD}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

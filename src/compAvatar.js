@@ -1,7 +1,6 @@
 import React from 'react';
 import {Avatar} from 'react-native-elements';
 import { View, Button,Text } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
 function BackButton() {
   const navigation = useNavigation();
@@ -45,9 +44,6 @@ export function AvatarC(){
         source={{ uri: "https://scontent.fceb6-1.fna.fbcdn.net/v/t1.15752-9/375021034_6796842080409118_6228409176377630753_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeFFN416-wCbiKCeGEzbTA1BoDi5ESymnPqgOLkRLKac-qTaUX9BBHXgyoyCMvgPyqhundRyJvuulFiaGgD_e66R&_nc_ohc=EhUlKmcHSwIAX9CxMzE&_nc_ht=scontent.fceb6-1.fna&oh=03_AdQ_eaCDkib6Ny5DsHNmMlGNACkHgtnkXJO_5RQklyVd7A&oe=6552E23F" }}
       />
     </View>
-    <View style={{padding:20}}>
-      <BackButton />
-    </View> 
 </View>
   );
 }

@@ -1,20 +1,7 @@
 import React from 'react';
 import { View, ScrollView, Button, Platform } from 'react-native';
 import { AirbnbRating } from '@rneui/themed';
-import { useNavigation } from '@react-navigation/native';
 import { Rating } from '@rneui/themed';
-
-function BackButton() {
-    const navigation = useNavigation();
-    return (
-      <Button
-        title="BACK"
-        onPress={() => {
-          navigation.goBack();
-        }}
-      />
-    );
-  }
 
 export function Ratings () {
   const ratingCompleted = (rating) => {
@@ -94,9 +81,6 @@ export function Ratings () {
             showRating
           />
         </View>
-      <View style={{padding:20}}>
-        <BackButton />
-      </View> 
     </View>
   );
 };

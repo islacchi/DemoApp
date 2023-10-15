@@ -1,21 +1,8 @@
 import React, { useState } from 'react';
 import { BottomSheet, Button, ListItem } from 'react-native-elements';
-import { StyleSheet, View } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { View } from 'react-native';
 
-function BackButton() {
-  const navigation = useNavigation();
-  return (
-    <Button
-      title="BACK"
-      onPress={() => {
-        navigation.goBack();
-      }}
-    />
-  );
-}
-
-export function bottomSheet() {
+export function BS() {
 const [isVisible, setIsVisible] = useState(false);
 const list = [
   { title: 'Content 1' },
@@ -50,9 +37,7 @@ return (
         </ListItem>
       ))}
     </BottomSheet>
-    <View style={{padding:20}}>
-      <BackButton/>
-    </View> 
+
   </View>
 );
 };
