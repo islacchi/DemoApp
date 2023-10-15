@@ -6,6 +6,8 @@ import { StatusBar } from 'expo-status-bar';
 import { AvatarC } from './src/compAvatar';
 import { bottomSheet } from './src/compBottomSheet';
 import { Ratings } from './src/compRating';
+import { Badges } from './src/compBadge';
+import { Overlays } from './src/compOverlay';
 
 
 //MY HOME <3
@@ -49,13 +51,19 @@ function ComponentScreen({ navigation: { navigate }}) {
     <View style={styles.container}>
       <View style={styles.componentcont}>
         <View style={styles.button}>
-          <Button style={{}}  title="Avatar Component" onPress={() => navigate('Avatar')}/>
+          <Button style={{}}  title="Avatar" onPress={() => navigate('Avatar')}/>
         </View>
         <View style={styles.button}>
-          <Button  title="BottomSheet Component" onPress={() => navigate('Bottom Sheet')}/>
+          <Button  title="BottomSheet" onPress={() => navigate('Bottom Sheet')}/>
         </View>
         <View style={styles.button}>
-          <Button  title="Rating Component" onPress={() => navigate('Rating')}/>
+          <Button  title="Rating" onPress={() => navigate('Rating')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Badge" onPress={() => navigate('Badge')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Overlay" onPress={() => navigate('Overlay')}/>
         </View>
       </View>
       
@@ -91,10 +99,12 @@ export default function App() {
           component={HomeScreen}
           options={{ headerTitle: () => <HeaderLogo /> }}
           />
-        <Stack.Screen name="COMPONENTS" component={ComponentScreen} />
-        <Stack.Screen name="Avatar" component={AvatarC} />
-        <Stack.Screen name="Bottom Sheet" component={bottomSheet} />
-        <Stack.Screen name="Rating" component={Ratings} />
+        <Stack.Screen name="COMPONENTS" component={ComponentScreen}/>
+        <Stack.Screen name="Avatar" component={AvatarC}/>
+        <Stack.Screen name="Bottom Sheet" component={bottomSheet}/>
+        <Stack.Screen name="Rating" component={Ratings}/>
+        <Stack.Screen name="Badge" component={Badges}/>
+        <Stack.Screen name="Overlay" component={Overlays}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

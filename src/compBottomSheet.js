@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { BottomSheet, Button, ListItem } from 'react-native-elements';
-import { StyleSheet } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { StyleSheet, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 function BackButton() {
@@ -31,13 +30,12 @@ const list = [
     onPress: () => setIsVisible(false),
   },
 ];
-
 return (
-  <SafeAreaProvider>
+  <View>
     <Button
       title="Open Sheet"
       onPress={() => setIsVisible(true)}
-      buttonStyle={styles.button}
+      buttonStyle={{margin: 50,}}
     />
     <BottomSheet modalProps={{}} isVisible={isVisible}>
       {list.map((j, c) => (
@@ -52,13 +50,9 @@ return (
         </ListItem>
       ))}
     </BottomSheet>
-    <BackButton/>
-  </SafeAreaProvider>
+    <View style={{padding:20}}>
+      <BackButton/>
+    </View> 
+  </View>
 );
 };
-
-const styles = StyleSheet.create({
-button: {
-  margin: 50,
-},
-});
