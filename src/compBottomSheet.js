@@ -8,8 +8,7 @@ function BackButton() {
   const navigation = useNavigation();
   return (
     <Button
-      title="Return"
-      style={{}}
+      title="BACK"
       onPress={() => {
         navigation.goBack();
       }}
@@ -36,7 +35,7 @@ const list = [
 return (
   <SafeAreaProvider>
     <Button
-      title="Open Bottom Sheet"
+      title="Open Sheet"
       onPress={() => setIsVisible(true)}
       buttonStyle={styles.button}
     />
@@ -53,7 +52,7 @@ return (
         </ListItem>
       ))}
     </BottomSheet>
-    <BackButton />
+    <BackButton/>
   </SafeAreaProvider>
 );
 };

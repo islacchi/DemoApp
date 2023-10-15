@@ -3,8 +3,9 @@ import { Button, Image, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
-import { Avatarr } from './src/compAvatar';
-import { bottomSheet } from './src/bottomsheet';
+import { AvatarC } from './src/compAvatar';
+import { bottomSheet } from './src/compBottomSheet';
+import { Ratings } from './src/compRating';
 
 
 //MY HOME <3
@@ -16,8 +17,7 @@ function HomeScreen({ navigation }) {
         style={styles.wew}
         source={require('./assets/rnlogo.gif')}
       />
-      </View>
-      
+      </View> 
       <Text style={{fontSize:'25px', textAlign:'center'}}>REACT NATIVE DEMO APP</Text>
       <br/>
       <View style={styles.buttoncont}>
@@ -26,7 +26,6 @@ function HomeScreen({ navigation }) {
           onPress={() => navigation.navigate('COMPONENTS')}
         /> 
       </View>
-      
       <StatusBar style="auto" />
     </View>
   );
@@ -35,7 +34,6 @@ function HomeScreen({ navigation }) {
 function HeaderLogo() {
   return (
     <View style={styles.headerlogocont}>
-      
       <Image
         style={styles.logo}
         source={require('./assets/JAYCE_LOGO.png')}
@@ -54,7 +52,10 @@ function ComponentScreen({ navigation: { navigate }}) {
           <Button style={{}}  title="Avatar Component" onPress={() => navigate('Avatar')}/>
         </View>
         <View style={styles.button}>
-          <Button  title="BottomSheet Component" onPress={() => navigate('bottomsheet')}/>
+          <Button  title="BottomSheet Component" onPress={() => navigate('Bottom Sheet')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Rating Component" onPress={() => navigate('Rating')}/>
         </View>
       </View>
       
@@ -91,8 +92,9 @@ export default function App() {
           options={{ headerTitle: () => <HeaderLogo /> }}
           />
         <Stack.Screen name="COMPONENTS" component={ComponentScreen} />
-        <Stack.Screen name="Avatar" component={Avatarr} />
-        <Stack.Screen name="bottomsheet" component={bottomSheet} />
+        <Stack.Screen name="Avatar" component={AvatarC} />
+        <Stack.Screen name="Bottom Sheet" component={bottomSheet} />
+        <Stack.Screen name="Rating" component={Ratings} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -121,7 +123,6 @@ const styles = StyleSheet.create({
     marginLeft:40,
     marginRight:40,
     marginTop:10,
-    
   },
   intrologocont:{
     justifyContent:'center',
@@ -130,12 +131,8 @@ const styles = StyleSheet.create({
   componentcont:{
     flex:1,
     margin:40,
-
   },
   button:{
     margin:10,
   },
-
-  
-
 });
