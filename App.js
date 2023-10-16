@@ -10,6 +10,8 @@ import { Badges } from './src/compBadge';
 import { Overlays } from './src/compOverlay';
 import { SD } from './src/compSpeedDial';
 import { Collapse } from './src/compCollapsible';
+import { SpinnerC } from './src/compSpinner';
+import { fList } from './src/compFlatList';
 
 
 //MY HOME <3
@@ -73,6 +75,12 @@ function ComponentScreen({ navigation: { navigate }}) {
         <View style={styles.button}>
           <Button  title="Collapsible" onPress={() => navigate('Collapsible')}/>
         </View>
+        <View style={styles.button}>
+          <Button  title="Spinner" onPress={() => navigate('Spinner')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Flat List" onPress={() => navigate('Flat List')}/>
+        </View>
       </View>
       
       <StatusBar style="auto" />
@@ -115,6 +123,8 @@ export default function App() {
         <Stack.Screen name="Overlay" component={Overlays}/>
         <Stack.Screen name="Speed Dial" component={SD}/>
         <Stack.Screen name="Collapsible" component={Collapse}/>
+        <Stack.Screen name="Spinner" component={SpinnerC}/>
+        <Stack.Screen name="Flat List" component={fList}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -22,24 +22,43 @@ export function Collapse() {
       ),
     },
     {
-      title: 'Fast refresh',
+      title: 'Can you be my bill of rights Article 3 Section 9?',
       content: (
         <Text style={styles.textSmall}>
-          See your changes as soon as you save.
-          With the power of JavaScript, React Native lets you iterate at
-          lightning speed.
+          Private property shall not be taken for public use without just compensation.
         </Text>
       ),
     },
     {
-      title: 'Cross-platform',
+        title: 'STOP!',
+        content: (
+          <Text style={styles.textSmall}>
+            Look, listen and love me.
+          </Text>
+        ),
+      },
+      {
+        title: 'NDRRMC: orange rainfall warning',
+        content: (
+          <Text style={styles.textSmall}>
+            Nag babanta ang pagbuhos ng pagmamahal ko sayo, ingat ka love you mwa mwa.
+          </Text>
+        ),
+      },
+      {
+        title: 'Maikli ang buhay',
+        content: (
+          <Text style={styles.textSmall}>
+            Pls sayangin mo na sakin yan.
+          </Text>
+        ),
+      }, 
+    {
+      title: 'Article 1156',
       content: (
         <>
           <Text style={styles.textSmall}>
-            React components wrap existing native code
-            and interact with native APIs via React's declarative UI paradigm
-            and JavaScript. This enables native app development for whole new teams
-            of developers
+            An Obligation is a juridical necessity to give, to do and love me too.
           </Text>
           <View style={styles.seperator}></View>
           <Button title="See More" />
