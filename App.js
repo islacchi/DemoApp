@@ -12,6 +12,9 @@ import { SD } from './src/compSpeedDial';
 import { Collapse } from './src/compCollapsible';
 import { SpinnerC } from './src/compSpinner';
 import { fList } from './src/compFlatList';
+import { FormsC } from './src/compForms';
+import { CardC } from './src/compCards';
+import { DialogsC } from './src/compDialog';
 
 
 //MY HOME <3
@@ -81,6 +84,15 @@ function ComponentScreen({ navigation: { navigate }}) {
         <View style={styles.button}>
           <Button  title="Flat List" onPress={() => navigate('Flat List')}/>
         </View>
+        <View style={styles.button}>
+          <Button  title="Forms" onPress={() => navigate('Forms')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Cards" onPress={() => navigate('Cards')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Dialogs" onPress={() => navigate('Dialogs')}/>
+        </View>
       </View>
       
       <StatusBar style="auto" />
@@ -125,6 +137,9 @@ export default function App() {
         <Stack.Screen name="Collapsible" component={Collapse}/>
         <Stack.Screen name="Spinner" component={SpinnerC}/>
         <Stack.Screen name="Flat List" component={fList}/>
+        <Stack.Screen name="Forms" component={FormsC}/>
+        <Stack.Screen name="Cards" component={CardC}/>
+        <Stack.Screen name="Dialogs" component={DialogsC}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -160,9 +175,11 @@ const styles = StyleSheet.create({
   },
   componentcont:{
     flex:1,
-    margin:40,
+    marginTop:10,
+    marginLeft:40,
+    marginRight:40,
   },
   button:{
-    margin:10,
+    margin:8,
   },
 });
