@@ -9,6 +9,7 @@ import { Ratings } from './src/compRating';
 import { Badges } from './src/compBadge';
 import { Overlays } from './src/compOverlay';
 import { SD } from './src/compSpeedDial';
+import { Collapse } from './src/compCollapsible';
 
 
 //MY HOME <3
@@ -69,6 +70,9 @@ function ComponentScreen({ navigation: { navigate }}) {
         <View style={styles.button}>
           <Button  title="Speed Dial" onPress={() => navigate('Speed Dial')}/>
         </View>
+        <View style={styles.button}>
+          <Button  title="Collapsible" onPress={() => navigate('Collapsible')}/>
+        </View>
       </View>
       
       <StatusBar style="auto" />
@@ -110,6 +114,7 @@ export default function App() {
         <Stack.Screen name="Badge" component={Badges}/>
         <Stack.Screen name="Overlay" component={Overlays}/>
         <Stack.Screen name="Speed Dial" component={SD}/>
+        <Stack.Screen name="Collapsible" component={Collapse}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

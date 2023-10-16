@@ -1,5 +1,5 @@
 import React from 'react';
-import { SpeedDial, Button } from '@rneui/themed';
+import { SpeedDial } from '@rneui/themed';
 import { View } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
