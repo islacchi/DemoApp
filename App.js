@@ -15,6 +15,9 @@ import { fList } from './src/compFlatList';
 import { FormsC } from './src/compForms';
 import { CardC } from './src/compCards';
 import { DialogsC } from './src/compDialog';
+import { DividerC } from './src/compDivider';
+import { TileC } from './src/compTiles';
+import { CarouselC } from './src/compCarousel';
 
 
 //MY HOME <3
@@ -93,18 +96,21 @@ function ComponentScreen({ navigation: { navigate }}) {
         <View style={styles.button}>
           <Button  title="Dialogs" onPress={() => navigate('Dialogs')}/>
         </View>
+        <View style={styles.button}>
+          <Button  title="Divider" onPress={() => navigate('Divider')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Tiles" onPress={() => navigate('Tiles')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Carousel" onPress={() => navigate('Carousel')}/>
+        </View>
       </View>
       
       <StatusBar style="auto" />
     </View>
   );
 }
-
-
-
-
-
-
 
 const Stack = createNativeStackNavigator();
 
@@ -140,12 +146,13 @@ export default function App() {
         <Stack.Screen name="Forms" component={FormsC}/>
         <Stack.Screen name="Cards" component={CardC}/>
         <Stack.Screen name="Dialogs" component={DialogsC}/>
+        <Stack.Screen name="Divider" component={DividerC}/>
+        <Stack.Screen name="Tiles" component={TileC}/>
+        <Stack.Screen name="Carousel" component={CarouselC}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

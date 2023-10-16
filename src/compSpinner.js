@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   item: {
-    backgroundColor: '#2089dc',
+    backgroundColor: '#B22222',
     padding: 12,
     marginBottom: 12,
     marginLeft: 8,

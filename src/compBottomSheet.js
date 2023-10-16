@@ -22,7 +22,7 @@ return (
     <Button
       title="Open Sheet"
       onPress={() => setIsVisible(true)}
-      buttonStyle={{margin: 50,}}
+      buttonStyle={{margin: 50, backgroundColor:'#B22222'}}
     />
     <BottomSheet modalProps={{}} isVisible={isVisible}>
       {list.map((j, c) => (
@@ -37,7 +37,6 @@ return (
         </ListItem>
       ))}
     </BottomSheet>
-
   </View>
 );
 };

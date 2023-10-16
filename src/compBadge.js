@@ -113,7 +113,7 @@ export function Badges(){
 
 const styles = StyleSheet.create({
   subHeader: {
-    backgroundColor: '#2089dc',
+    backgroundColor: '#B22222',
     color: 'white',
     textAlign: 'center',
     marginBottom: 10,

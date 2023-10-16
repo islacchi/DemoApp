@@ -28,11 +28,12 @@ export function Overlays () {
             <FontAwesome
               name="heart"
               type="font-awesome"
-              color="red"
+              color="white"
               size={25}
               style={{marginLeft:5, marginRight:5}}
             />
           }
+          buttonStyle={styles.button}
           title="Start Discovering"
           onPress={toggleOverlay}
         />
@@ -44,6 +45,7 @@ export function Overlays () {
 const styles = StyleSheet.create({
   button: {
     margin: 50,
+    backgroundColor:'#B22222'
   },
   prim: {
     margin: 20,

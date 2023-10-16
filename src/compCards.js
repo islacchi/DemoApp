@@ -111,6 +111,7 @@ export function CardC() {
               />
             }
             buttonStyle={{
+              backgroundColor:'#B22222',
               borderRadius: 0,
               marginLeft: 0,
               marginRight: 0,

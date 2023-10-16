@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   },
   accordHeader: {
     padding: 12,
-    backgroundColor: '#2089dc',
+    backgroundColor: '#B22222',
     color: '#eee',
     flex: 1,
     flexDirection: 'row',

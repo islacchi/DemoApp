@@ -188,6 +188,7 @@ button: {
   borderRadius: 6,
   width: 220,
   margin: 20,
+  backgroundColor:'#B22222'
 },
 buttonContainer: {
   margin: 20,
