@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  Button,
-} from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Text,View ,Button } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Accordion from 'react-native-collapsible/Accordion';
 

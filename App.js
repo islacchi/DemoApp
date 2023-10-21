@@ -18,6 +18,12 @@ import { DialogsC } from './src/compDialog';
 import { DividerC } from './src/compDivider';
 import { TileC } from './src/compTiles';
 import { CarouselC } from './src/compCarousel';
+import { TabC } from './src/compTab';
+import { SliderC } from './src/compSlider';
+import { ButtonGroupC } from './src/compButtonGroup';
+import { PricingC } from './src/compPricing';
+import { SwitchC } from './src/compSwitch';
+
 
 
 //MY HOME <3
@@ -30,7 +36,7 @@ function HomeScreen({ navigation }) {
         source={require('./assets/rnlogo.gif')}
       />
       </View> 
-      <Text style={{fontSize:'25px', textAlign:'center'}}>REACT NATIVE DEMO APP</Text>
+      <Text style={{fontSize:'25px', textAlign:'center', marginBottom:10, marginTop:10, fontWeight:'bold'}}>REACT NATIVE DEMO APP</Text>
       <br/>
       <View style={styles.buttoncont}>
         <Button
@@ -105,8 +111,22 @@ function ComponentScreen({ navigation: { navigate }}) {
         <View style={styles.button}>
           <Button  title="Carousel" onPress={() => navigate('Carousel')}/>
         </View>
+        <View style={styles.button}>
+          <Button  title="Tab" onPress={() => navigate('Tab')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Slider" onPress={() => navigate('Slider')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Button Group" onPress={() => navigate('Button Group')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Pricing" onPress={() => navigate('Pricing')}/>
+        </View>
+        <View style={styles.button}>
+          <Button  title="Switch" onPress={() => navigate('Switch')}/>
+        </View>
       </View>
-      
       <StatusBar style="auto" />
     </View>
   );
@@ -149,6 +169,11 @@ export default function App() {
         <Stack.Screen name="Divider" component={DividerC}/>
         <Stack.Screen name="Tiles" component={TileC}/>
         <Stack.Screen name="Carousel" component={CarouselC}/>
+        <Stack.Screen name="Tab" component={TabC}/>
+        <Stack.Screen name="Slider" component={SliderC}/>
+        <Stack.Screen name="Button Group" component={ButtonGroupC}/>
+        <Stack.Screen name="Pricing" component={PricingC}/>
+        <Stack.Screen name="Switch" component={SwitchC}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -168,6 +193,8 @@ const styles = StyleSheet.create({
     height: 32,
   },
   wew:{
+    marginTop:50,
+    marginBotom:50,
     width: 380,
     height: 380,
   },
@@ -181,8 +208,7 @@ const styles = StyleSheet.create({
     alignItems:'center'
   },
   componentcont:{
-    flex:1,
-    marginTop:10,
+    height:'auto',
     marginLeft:40,
     marginRight:40,
   },
