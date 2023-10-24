@@ -2,18 +2,6 @@ import React from 'react';
 import {Avatar} from 'react-native-elements';
 import { View, Button,Text } from 'react-native';
 
-function BackButton() {
-  const navigation = useNavigation();
-  return (
-    <Button
-      title="Back"
-      onPress={() => {
-        navigation.goBack();
-      }}
-    />
-  );
-}
-
 export function AvatarC(){
   return( 
   <View>
